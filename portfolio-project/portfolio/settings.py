@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'jobs.apps.JobsConfig',
+    'blog.apps.BlogConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -76,11 +77,12 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'HOST': 'mysql-v5.7',
-        'USER': 'docker',
-        'PASSWORD': 'secret',
+        'ENGINE': 'django.db.backends.postgresql',
+        'HOST': '127.0.0.1',
+        'USER': '',
+        'PASSWORD': '',
         'NAME': 'udemy_portfolio',
+        'PORT': '5432'
     },
     'sqlite': {
         'ENGINE': 'django.db.backends.sqlite3',
